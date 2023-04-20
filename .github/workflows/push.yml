@@ -24,4 +24,4 @@ jobs:
           docker buildx create --use --name multi-arch-builder
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
           docker buildx ls
-          docker buildx build --platform linux/arm64 --push -t vehicleregistry.azurecr.io/vehicle-data-simulator:${{ github.run_number }} .
+          docker buildx build --platform linux/arm64 --push -t vehicleregistry.azurecr.io/vehicle-data-simulator-arm64:${{ github.run_number }} .
